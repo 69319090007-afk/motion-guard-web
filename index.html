@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Room Monitor — ระบบเฝ้าระวังการเคลื่อนไหว</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="wrap">
+
+    <div class="header">
+      <div class="title-block">
+        <h1>ROOM MONITOR</h1>
+        <p>ระบบเฝ้าระวังการเคลื่อนไหว · ย้อนหลัง 7 วัน</p>
+      </div>
+      <div>
+        <div class="status-badge">
+          <span class="dot" id="statusDot"></span>
+          <span id="statusText">กำลังเชื่อมต่อ...</span>
+        </div>
+        <div class="clock" id="clock" style="text-align:right; margin-top:6px;"></div>
+      </div>
+    </div>
+
+    <div class="stats">
+      <div class="stat-card">
+        <div class="label">เหตุการณ์ทั้งหมด (7 วัน)</div>
+        <div class="value" id="totalCount">-</div>
+      </div>
+      <div class="stat-card accent-amber">
+        <div class="label">วันนี้</div>
+        <div class="value" id="todayCount">-</div>
+      </div>
+      <div class="stat-card accent-green">
+        <div class="label">ตรวจพบล่าสุด</div>
+        <div class="value" id="lastSeen" style="font-size:18px;">-</div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-title">เหตุการณ์ต่อวัน</div>
+      <div class="chart" id="chart"></div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-title">ประวัติเหตุการณ์</div>
+      <div class="log-list" id="logList"></div>
+    </div>
+
+    <div class="footer-note">ROOM MONITOR SYSTEM · ข้อมูลจาก Firebase Realtime Database</div>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
